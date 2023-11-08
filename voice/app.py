@@ -2,9 +2,6 @@ from bark import SAMPLE_RATE, generate_audio, preload_models
 from scipy.io.wavfile import write as write_wav
 from IPython.display import Audio
 
-# download and load all models
-preload_models()
-
 # generate audio from text
 text_prompt = """
      Hello, my name is alice and i am your personal assistant
