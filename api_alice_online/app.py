@@ -1,7 +1,7 @@
 import openai
 
 # Configure sua chave de API do OpenAI
-openai.api_key = "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"
+openai.api_key = "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"
 
 def obter_resposta_conversa(conversa):
     try:
