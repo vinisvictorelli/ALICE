@@ -1,6 +1,7 @@
 from gtts import gTTS
-import os
 from gtts.tokenizer.pre_processors import abbreviations, end_of_line
-tts = gTTS("Hi,I am alice, and i am your personal assistant",lang="en",slow=False)
+from gtts.tokenizer.tokenizer_cases import tone_marks
+def voice(text):
+    tts = gTTS(text=text,lang="pt-br",slow=False,pre_processor_funcs=[abbreviations,end_of_line],tokenizer_func=[tone_marks])
+    tts.save("output.mp3")
 
-tts.save("output.mp3")

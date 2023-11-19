@@ -1,10 +1,8 @@
-from TTS.utils.manage import ModelManager
-from TTS.utils.synthesizer import Synthesizer
+from TTS.api import TTS
 
-path = "./TTS/TTS/.models.json"
-
-model_manager = ModelManager(path)
-
-model_path, config_path, model_item = model_manager.download_model("tts_models/pt/cv/vits")
-
-voc_path, voc_config_path, _ = model_manager.download_model(model_item["default_vocoder"])
+api = TTS("tts_models/por/fairseq/vits")
+api.tts_with_vc_to_file(
+    "Ola, meu nome é alice",
+    speaker_wav="output.wav",
+    file_path="teste.wav"
+)
