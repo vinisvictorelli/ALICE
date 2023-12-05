@@ -78,3 +78,18 @@ Esse projeto está dividido em várias pastas e subpastas:
 
 # BARD_API TOKEN
 Verifique os [tokens que você deseja utilizar](https://medium.com/@marc.bolle/access-google-bard-with-python-package-bard-api-6000251d1aa8) para autenticação com o Bard e faça as alterações no arquivo [_googlebardapi.py_](api_alice_online/googlebardapi.py) presente na pasta [_api\_alice\_online_](api_alice_online/).
+
+# RECONHECIMENTO DE IMAGEM
+Para adicionar mais pessoas à lista de faces reconhecíveis pela IA presente no projeto, adicione uma foto de cada pessoa na pasta [_face\_recognition_/known](face_recognition/known/). O arquivo da foto deve conter somente uma única pessoa e o arquivo deve ser nomeado com o nome que se deseja que apareça para a IA utilizar.
+
+Por exemplo:
+```
+Nome desejado: Ayrton Rodrigues Guerra
+Nome do arquivo: Ayrton Rodrigues Guerra.jpg
+```
+
+A IA reconhece vários tipos de arquivos no formato de imagem, não somente a extensão `jpg` que foi utilizado no exemplo acima.
+
+Já para remover pessoas da lista de faces reconhecíveis pela IA, basta remover da pasta [_face\_recognition_/known](face_recognition/known/) os arquivos correspondentes das pessoas.
+
+Caso a IA presente no projeto, não consiga identificar a pessoa, aparecerá o nome `Unknown` na base do retângulo desenhado em volta do rosto identificado pela IA.
