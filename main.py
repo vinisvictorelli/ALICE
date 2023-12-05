@@ -57,11 +57,9 @@ def main():
     print()
     print(get_audio_template_text(WELCOME))
     play_voice_from_template(WELCOME)
-    #playsound(get_audio_template_audio_name(WELCOME))
     print()
     print(get_audio_template_text(FACE_RECOGNITION_INSTRUCTIONS))
     play_voice_from_template(FACE_RECOGNITION_INSTRUCTIONS)
-    #playsound(get_audio_template_audio_name(FACE_RECOGNITION_INSTRUCTIONS))
     print()
 
     # start face recognition
@@ -135,11 +133,6 @@ def main():
 
         process_this_frame = not process_this_frame
 
-        #print()
-        #print('Recognized person:')
-        #print(person_recognized)
-        #print()
-
         # Display the results
         for (top, right, bottom, left), name in zip(face_locations, face_names):
             # Scale back up face locations since the frame we detected in was scaled to 1/4 size
@@ -175,7 +168,6 @@ def main():
                     text_print = HELLO_MESSAGE_PART_1 + person_recognized + HELLO_MESSAGE_PART_2
                     temp_voice_generate(text_print)
                     print(text_print)
-                    #playsound(TEMP_RESP_AUDIO)
                     play_voice(TEMP_RESP_AUDIO)
                     voice_command = reconhecimento_audio()
                     if(voice_command != ''):
@@ -183,14 +175,10 @@ def main():
                         print('Sua pergunta: ' + voice_command)
                         print()
                         print('Pensando...')
-                        #print(get_audio_template_text(SEARCHING))
-                        #playsound(get_audio_template_audio_name(SEARCHING))
-                        #play_voice_from_template(SEARCHING)
                         response = GoogleBard(voice_command)
                         temp_voice_generate(response)
                         print()
                         print(response)
-                        #playsound(TEMP_RESP_AUDIO)
                         play_voice(TEMP_RESP_AUDIO)
 
                 else:
