@@ -2,10 +2,8 @@
 from audios.audio_templates import audio_templates as at
 from voice_generate.app import voice
 from voice_recognition.app import reconhecimento_audio
-from playsound import playsound
 from pydub import AudioSegment
 from pydub.playback import play
-from pydub import effects
 # Face recognition imports
 import face_recognition
 import cv2
@@ -211,12 +209,3 @@ def main():
     cv2.destroyAllWindows()
 
 main()
-
-def main_():
-    comando = reconhecimento_audio()
-    print(comando)
-    resposta = GoogleBard(comando)
-    print(resposta)
-    resp_audio = './audios/temp/resp.mp3'
-    voice(resposta, resp_audio)
-    playsound(resp_audio)
