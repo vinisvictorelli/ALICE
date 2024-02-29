@@ -1,5 +1,5 @@
 # ALICE
-ALICE - Assistente de Linguagem e Interação Computadorizada Eficiente
+A ALICE, Assistente de Linguagem e Interação Computadorizada Eficiente, é uma assistente pessoal inteligente, destacando-se pela integração de reconhecimento facial para controle de acesso, controle vocal da interface e respostas contextuais avançadas baseadas em modelos GPT. A interface controlada por voz promove praticidade e acessibilidade, enquanto o sistema baseado em modelos de LLM's promove respostas mais avançadas baseadas no perfil do usuário.Concebi e implementei uma assistente pessoal inteligente, destacando-se pela integração de reconhecimento facial para controle de acesso, controle vocal da interface e respostas contextuais avançadas baseadas em modelos GPT. A interface controlada por voz promove praticidade e acessibilidade, enquanto o sistema baseado em modelos de LLM's promove respostas mais avançadas baseadas no perfil do usuário.
 
 # DEPENDÊNCIAS
 Para utilizar este projeto, por favor, certifique-se que o `Python`, `pip` e o `pipenv` estejam instalados em seu computador. O pip e o pipenv foram utilizados para gerenciar as dependências do projeto. Por este motivo, toda vez que for executar este projeto pela linha de comando, devemos entrar no ambiente provisionado pelo pipenv e dentro dele executar os arquivos que desejamos:
